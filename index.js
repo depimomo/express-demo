@@ -4,6 +4,10 @@ const express = require('express');
 const colorRouter = require('./routes/colorRoutes');
 
 const app = express();
+
+//add middleware so we can read data from req body
+app.use(express.json());
+
 const PORT = 3010;
 
 app.get('/', (req, res) => {
